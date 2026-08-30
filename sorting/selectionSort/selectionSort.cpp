@@ -1,7 +1,7 @@
 # include <iostream>
 # include <vector>
 
-template <typename T> T selectionSort(std::vector<T> arr)
+template <typename T> std::vector<T> selectionSort(std::vector<T> arr)
 {
     // first pointer is the element to be sorted
     // second pointer checks to find the min in the array
@@ -39,6 +39,11 @@ int main()
     std::vector<bool> boolArr = {true, false, true, true, false};
     std::vector<int> intArr = {5,4,3,2,1,0};
     std::vector<char> charArr = {'C', 'B', 'A'};
+    printArr(selectionSort(boolArr));
+    std::cout << '\n';
+    printArr(selectionSort(intArr));
+    std::cout << '\n';
+    printArr(selectionSort(charArr));
     
     
     return 0;
